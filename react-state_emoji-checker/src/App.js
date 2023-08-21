@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  let code = "?";
+  const [code, setCode] = useState("");
 
   const validCode = "🐡🐠🐋";
-
   return (
     <div className="container">
       <div className="button-container">
         <button
           type="button"
-          onClick={() => {
+          onClick={(event) => {
             console.log("Update Code!");
+            setCode(code + event.target.textContent);
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -21,8 +21,9 @@ export default function App() {
         </button>
         <button
           type="button"
-          onClick={() => {
+          onClick={(event) => {
             console.log("Update Code!");
+            setCode(code + event.target.textContent);
           }}
         >
           <span role="img" aria-label="Whale">
@@ -31,8 +32,9 @@ export default function App() {
         </button>
         <button
           type="button"
-          onClick={() => {
+          onClick={(event) => {
             console.log("Update Code!");
+            setCode(code + event.target.textContent);
           }}
         >
           <span role="img" aria-label="Clownfish">
@@ -40,11 +42,11 @@ export default function App() {
           </span>
         </button>{" "}
       </div>
-
       <button
         type="button"
         onClick={() => {
           console.log("Reset Code!");
+          setCode("");
         }}
       >
         Reset

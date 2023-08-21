@@ -11,7 +11,6 @@ export default function App() {
     </main>
   );
 }
-
 function Button({ children }) {
   return (
     <button className="button" type="button">

@@ -10,7 +10,7 @@ export default function App() {
   );
 }
 
-const Boxes = () => {
+function Boxes() {
   return (
     <>
       <Box color="#007bff" />
@@ -18,4 +18,4 @@ const Boxes = () => {
       <Box color="#ff3333" />
     </>
   );
-};
+}

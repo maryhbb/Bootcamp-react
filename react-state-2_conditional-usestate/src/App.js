@@ -4,6 +4,10 @@ import { useState } from "react";
 
 export default function App() {
   const [showMessage, setShowMessage] = useState(false);
+
+  //To fix this issue, should move the useState hook for the message outside of the conditional block:
+
+  const [message, setMessage] = useState("Secret message incoming...");
   if (!showMessage) {
     return (
       <div className="container">
@@ -23,8 +27,6 @@ export default function App() {
       </div>
     );
   }
-
-  const [message, setMessage] = useState("Secret message incoming...");
 
   return (
     <div className="container">

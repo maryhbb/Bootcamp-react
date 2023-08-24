@@ -47,11 +47,12 @@ export default function EntriesSection() {
         </Tab>
       </Tabs>
       <div className="entries-section__entries">
-        {entries.map((journalEntry) => {
+        {entries.map((journalEntry, index) => {
           return (
             <Fragment key={journalEntry.id}>
               <Entry {...journalEntry} />
-              <Divider />
+
+              {index !== entries.length - 1 && <Divider />}
             </Fragment>
           );
         })}

@@ -1,24 +1,23 @@
-import { MapContainer, MapImage, MapISS } from "./Map.styled";
+import "./Map.css";
 
 export default function Map({ longitude, latitude }) {
   const [x, y] = positionToMapCoordinates(longitude, latitude);
 
   return (
-    <MapContainer className="Map">
-      <MapImage
-        className="Map__image"
-        src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg"
+    <div className="map">
+      <img
+        className="map__image"
+        src=" https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg"
         alt="a map of the world"
-        fill
       />
-      <MapISS
-        className="Map__ISS"
+      <div
+        className="map__iss"
         style={{
           top: y,
           left: x,
         }}
-      ></MapISS>
-    </MapContainer>
+      ></div>
+    </div>
   );
 }
 
